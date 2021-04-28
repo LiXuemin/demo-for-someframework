@@ -17,6 +17,7 @@
     <modules>
         <module>netty-demo</module>
         <module>dataway-demo</module>
+        <module>multithread-demo</module>
     </modules>
 
 </project>
