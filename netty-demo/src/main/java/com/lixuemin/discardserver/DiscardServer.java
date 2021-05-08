@@ -42,7 +42,8 @@ public class DiscardServer {
                 .childHandler(new ChannelInitializer<SocketChannel>() {
                     @Override
                     protected void initChannel(SocketChannel ch) throws Exception {
-                        ch.pipeline().addLast(new DiscardServerHandler());
+//                        ch.pipeline().addLast(new DiscardServerHandler());
+                        ch.pipeline().addLast(new PrintMessageHandler());
                     }
                 })
                 //提供给NioServerSocketChannel用来接收进来的连接
