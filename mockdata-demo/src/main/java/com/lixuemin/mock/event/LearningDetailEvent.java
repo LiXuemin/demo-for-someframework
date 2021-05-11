@@ -1,9 +1,9 @@
 package com.lixuemin.mock.event;
 
-import java.util.Date;
-
 
 /**
+ * @program: bwol-icll
+ *
  * @description: 学习详情
  *
  * @author: lixuemin
@@ -13,12 +13,12 @@ import java.util.Date;
 public class LearningDetailEvent {
     private String resCode;//资源编码
     private Integer resType;//资源类型
-    private Date optTime;//操作时间
+    private Long optTime;//操作时间
     private String ansOption;//作答选项
     private Integer result;//作答结果
     private Integer eventType;//事件类型
-    private Date recordStartTime; //跟读开始
-    private Date recordEndTime;//跟读结束
+    private Long recordStartTime; //跟读开始
+    private Long recordEndTime;//跟读结束
     private String recordAudioCode;//跟读音频标识
     private Double recordScore;//跟读分值
 
@@ -38,13 +38,6 @@ public class LearningDetailEvent {
         this.resType = resType;
     }
 
-    public Date getOptTime() {
-        return optTime;
-    }
-
-    public void setOptTime(Date optTime) {
-        this.optTime = optTime;
-    }
 
     public String getAnsOption() {
         return ansOption;
@@ -70,19 +63,27 @@ public class LearningDetailEvent {
         this.eventType = eventType;
     }
 
-    public Date getRecordStartTime() {
+    public Long getOptTime() {
+        return optTime;
+    }
+
+    public void setOptTime(Long optTime) {
+        this.optTime = optTime;
+    }
+
+    public Long getRecordStartTime() {
         return recordStartTime;
     }
 
-    public void setRecordStartTime(Date recordStartTime) {
+    public void setRecordStartTime(Long recordStartTime) {
         this.recordStartTime = recordStartTime;
     }
 
-    public Date getRecordEndTime() {
+    public Long getRecordEndTime() {
         return recordEndTime;
     }
 
-    public void setRecordEndTime(Date recordEndTime) {
+    public void setRecordEndTime(Long recordEndTime) {
         this.recordEndTime = recordEndTime;
     }
 
@@ -100,11 +101,5 @@ public class LearningDetailEvent {
 
     public void setRecordScore(Double recordScore) {
         this.recordScore = recordScore;
-    }
-
-    @Override
-    public String toString() {
-        return "LearningDetailEvent{" + "resCode='" + resCode + '\'' + ", resType=" + resType + ", optTime=" + optTime
-            + ", ansOption='" + ansOption + '\'' + ", result=" + result + ", eventType=" + eventType + '}';
     }
 }

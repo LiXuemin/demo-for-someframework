@@ -5,6 +5,7 @@ import com.github.jsonzou.jmockdata.MockConfig;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.lixuemin.mock.event.LearningEvent;
+import java.time.Instant;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -39,6 +40,8 @@ public class LearningEventMockTest {
             .intRange(100020001, 100020002)
             .subConfig("resType", "pageType", "result")
             .intRange(0, 1)
+            .subConfig("learnStartTime", "learnEndTime","recordStartTime","recordEndTime","optTime")
+            .longRange(1615448379000L, 1620718779425L)
             .globalConfig();
         LearningEvent mockLearningEvent = JMockData.mock(LearningEvent.class, mockConfig);
         System.out.println(gson.toJson(mockLearningEvent));
@@ -49,5 +52,11 @@ public class LearningEventMockTest {
         long x = 3, y = 4;
         Assertions.assertEquals(x / y, 0);
         Assertions.assertEquals((double) x / (double) y, 0.75);
+    }
+
+    @Test
+    public void testTime() {
+        System.out.println(System.currentTimeMillis());
+        System.out.println(Instant.now().toEpochMilli());
     }
 }
