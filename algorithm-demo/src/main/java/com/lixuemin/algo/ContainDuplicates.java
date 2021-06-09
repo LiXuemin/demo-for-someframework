@@ -14,9 +14,9 @@ import java.util.Set;
 public class ContainDuplicates {
     public static void main(String[] args) {
 //        Set<Integer> set = new HashSet<>();
-//        System.out.println(1 % 10);
-//        System.out.println(0 % 10);
-//        System.out.println(10 % 10);
+        System.out.println(1 % 10);
+        System.out.println(0 % 10);
+        System.out.println(10 % 10);
 //
 //        int[] arr = {1, 3, 4, 5};
 //        int[] arr1 = new int[arr.length];
