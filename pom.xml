@@ -19,6 +19,7 @@
         <module>dataway-demo</module>
         <module>multithread-demo</module>
         <module>mockdata-demo</module>
+      <module>mybatis-demo</module>
     </modules>
 
 </project>
