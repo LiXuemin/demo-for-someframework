@@ -1,11 +1,11 @@
 package com.lixuemin.mock.event;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import java.util.Date;
 import java.util.List;
 
 
 /**
+ * @program: bwol-icll
+ *
  * @description: 页面学习事件
  *
  * @author: lixuemin
@@ -20,10 +20,10 @@ public class LearningEvent {
     private Integer pageType;//页面类型
     private Integer learnStatus;//页面学习状态 已学，未学
     private Integer learnType;//学习类型 新学，复习
-    private Date learnStartTime;//本次学习起始时间
-    private Date learnEndTime;//本次学习结束时间
+    private Long learnStartTime;//本次学习起始时间
+    private Long learnEndTime;//本次学习结束时间
     private Integer learnTime;//页面学习时长
-    private Long subject;//学科
+    private Integer subject;//学科
     private List<LearningDetailEvent> detailList;
 
 
@@ -77,19 +77,19 @@ public class LearningEvent {
         this.learnType = learnType;
     }
 
-    public Date getLearnStartTime() {
+    public Long getLearnStartTime() {
         return learnStartTime;
     }
 
-    public void setLearnStartTime(Date learnStartTime) {
+    public void setLearnStartTime(Long learnStartTime) {
         this.learnStartTime = learnStartTime;
     }
 
-    public Date getLearnEndTime() {
+    public Long getLearnEndTime() {
         return learnEndTime;
     }
 
-    public void setLearnEndTime(Date learnEndTime) {
+    public void setLearnEndTime(Long learnEndTime) {
         this.learnEndTime = learnEndTime;
     }
 
@@ -101,11 +101,11 @@ public class LearningEvent {
         this.learnTime = learnTime;
     }
 
-    public Long getSubject() {
+    public Integer getSubject() {
         return subject;
     }
 
-    public void setSubject(Long subject) {
+    public void setSubject(Integer subject) {
         this.subject = subject;
     }
 
@@ -115,13 +115,5 @@ public class LearningEvent {
 
     public void setDetailList(List<LearningDetailEvent> detailList) {
         this.detailList = detailList;
-    }
-
-    @Override
-    public String toString() {
-        return "LearningEvent{" + "userId=" + userId + ", courseCode='" + courseCode + '\'' + ", pageCode='" + pageCode
-            + '\'' + ", pageType=" + pageType + ", learnStatus=" + learnStatus + ", learnType=" + learnType
-            + ", learnStartTime=" + learnStartTime + ", learnEndTime=" + learnEndTime + ", learnTime=" + learnTime
-            + ", subject=" + subject + ", detailList=" + detailList + '}';
     }
 }
