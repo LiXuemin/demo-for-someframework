@@ -1,9 +1,5 @@
 package com.lixuemin.thread;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
-
 /**
  * @program: demo-for-someframework
  *
@@ -14,8 +10,8 @@ import java.util.concurrent.locks.ReentrantLock;
  * @create: 2021-05-08
  **/
 public class FinalDemo {
-   public static volatile int i;
-   public static int j;
+    public static volatile int i;
+    public static int j;
 
     public static void main(String[] args) throws InterruptedException {
         Runnable A = new Runnable() {

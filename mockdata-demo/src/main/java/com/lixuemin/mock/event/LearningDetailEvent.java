@@ -1,6 +1,5 @@
 package com.lixuemin.mock.event;
 
-
 /**
  * @program: bwol-icll
  *
@@ -37,7 +36,6 @@ public class LearningDetailEvent {
     public void setResType(Integer resType) {
         this.resType = resType;
     }
-
 
     public String getAnsOption() {
         return ansOption;

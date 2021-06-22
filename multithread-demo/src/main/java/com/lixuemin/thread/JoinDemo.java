@@ -22,7 +22,6 @@ public class JoinDemo {
                     e.printStackTrace();
                 }
             }
-
         };
 
         Thread thread = new Thread(task);

@@ -1,7 +1,6 @@
 package com.lixuemin.discardserver;
 
 import io.netty.bootstrap.ServerBootstrap;
-import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
@@ -27,6 +26,11 @@ public class DiscardServer {
         this.port = port;
     }
 
+    public static void main(String[] args) throws Exception {
+        int port = args.length > 0 ? Integer.parseInt(args[0]) : 8080;
+        new DiscardServer(port).run();
+    }
+
     public void run() throws Exception {
         //接收进来的连接
         EventLoopGroup bossGroup = new NioEventLoopGroup();
@@ -37,15 +41,13 @@ public class DiscardServer {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
             serverBootstrap
                 //绑定bossGroup和workerGroup
-                .group(bossGroup, workerGroup)
-                .channel(NioServerSocketChannel.class)
-                .childHandler(new ChannelInitializer<SocketChannel>() {
-                    @Override
-                    protected void initChannel(SocketChannel ch) throws Exception {
+                .group(bossGroup, workerGroup).channel(NioServerSocketChannel.class).childHandler(new ChannelInitializer<SocketChannel>() {
+                @Override
+                protected void initChannel(SocketChannel ch) throws Exception {
 //                        ch.pipeline().addLast(new DiscardServerHandler());
-                        ch.pipeline().addLast(new PrintMessageHandler());
-                    }
-                })
+                    ch.pipeline().addLast(new PrintMessageHandler());
+                }
+            })
                 //提供给NioServerSocketChannel用来接收进来的连接
                 .option(ChannelOption.SO_BACKLOG, 128)
                 //提供给由父管道ServerChannel接收到的连接
@@ -54,14 +56,9 @@ public class DiscardServer {
             ChannelFuture channelFuture = serverBootstrap.bind(port).sync();
 
             channelFuture.channel().closeFuture().sync();
-        }finally {
+        } finally {
             workerGroup.shutdownGracefully();
             bossGroup.shutdownGracefully();
         }
-    }
-
-    public static void main(String[] args) throws Exception{
-        int port = args.length > 0 ? Integer.parseInt(args[0]) : 8080;
-        new DiscardServer(port).run();
     }
 }

@@ -16,9 +16,10 @@ import java.util.concurrent.FutureTask;
 public class ThreadMain {
 
     public static void main(String[] args) {
-        System.out.println(3^3);
-        System.out.println(0^4);
+        System.out.println(3 ^ 3);
+        System.out.println(0 ^ 4);
     }
+
     public static void main2(String[] args) {
         Thread.currentThread().getThreadGroup().list();
         System.out.println(Thread.activeCount());

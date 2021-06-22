@@ -24,7 +24,7 @@ public class PrintMessageHandler extends ChannelInboundHandlerAdapter {
                 System.out.println((char) in.readByte());
                 System.out.flush();
             }
-        }finally {
+        } finally {
             ReferenceCountUtil.release(msg);
         }
     }

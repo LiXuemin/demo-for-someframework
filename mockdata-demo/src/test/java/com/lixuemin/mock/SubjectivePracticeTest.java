@@ -4,7 +4,6 @@ import com.github.jsonzou.jmockdata.JMockData;
 import com.github.jsonzou.jmockdata.MockConfig;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.lixuemin.mock.event.LearningEvent;
 import com.lixuemin.mock.event.subjective.AehsAnswerDTO;
 import org.junit.jupiter.api.Test;
 
@@ -21,12 +20,11 @@ public class SubjectivePracticeTest {
     @Test
     public void testGenerateBeanWithConfig() {
         int[] ints = new int[]{1, 0};
-        MockConfig mockConfig = new MockConfig()
-            .subConfig("learnStatus")
+        MockConfig mockConfig = new MockConfig().subConfig("learnStatus")
             .intRange(100020001, 100020002)
             .subConfig("resType", "pageType", "result")
             .intRange(0, 1)
-            .subConfig("learnStartTime", "learnEndTime","recordStartTime","recordEndTime","optTime")
+            .subConfig("learnStartTime", "learnEndTime", "recordStartTime", "recordEndTime", "optTime")
             .longRange(1615448379000L, 1620718779425L)
             .globalConfig();
         AehsAnswerDTO aehsAnswerDTO = JMockData.mock(AehsAnswerDTO.class);

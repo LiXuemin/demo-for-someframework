@@ -25,16 +25,14 @@ import static graphql.schema.idl.TypeRuntimeWiring.newTypeWiring;
 @Component
 public class GraphQLProvider {
 
+    @Autowired
+    GraphQLDataFetchers graphQLDataFetchers;
     private GraphQL graphQL;
 
     @Bean
     public GraphQL graphQL() {
         return graphQL;
     }
-
-    @Autowired
-    GraphQLDataFetchers graphQLDataFetchers;
-
 
     /**
      * bean初始化时读取 schema.graphqls文件，创建GraphQLSchema实例和GraphQL实例
@@ -48,7 +46,6 @@ public class GraphQLProvider {
         this.graphQL = GraphQL.newGraphQL(graphQLSchema).build();
     }
 
-
     private GraphQLSchema buildSchema(String sdl) {
         TypeDefinitionRegistry typeRegistry = new SchemaParser().parse(sdl);
         RuntimeWiring runtimeWiring = buildWiring();
@@ -58,12 +55,8 @@ public class GraphQLProvider {
 
     private RuntimeWiring buildWiring() {
         return RuntimeWiring.newRuntimeWiring()
-                .type(newTypeWiring("Query")
-                        .dataFetcher("bookById", graphQLDataFetchers.getBookByIdDataFetcher()))
-                .type(newTypeWiring("Book")
-                        .dataFetcher("author", graphQLDataFetchers.getAuthorDataFetcher()))
-                .build();
+            .type(newTypeWiring("Query").dataFetcher("bookById", graphQLDataFetchers.getBookByIdDataFetcher()))
+            .type(newTypeWiring("Book").dataFetcher("author", graphQLDataFetchers.getAuthorDataFetcher()))
+            .build();
     }
-
-
 }

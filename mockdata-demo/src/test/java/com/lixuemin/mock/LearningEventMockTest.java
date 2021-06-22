@@ -40,7 +40,7 @@ public class LearningEventMockTest {
             .intRange(100020001, 100020002)
             .subConfig("resType", "pageType", "result")
             .intRange(0, 1)
-            .subConfig("learnStartTime", "learnEndTime","recordStartTime","recordEndTime","optTime")
+            .subConfig("learnStartTime", "learnEndTime", "recordStartTime", "recordEndTime", "optTime")
             .longRange(1615448379000L, 1620718779425L)
             .globalConfig();
         LearningEvent mockLearningEvent = JMockData.mock(LearningEvent.class, mockConfig);

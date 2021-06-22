@@ -11,7 +11,7 @@ import java.util.Arrays;
  **/
 class RemoveDuplicates {
     public static void main(String[] args) {
-        int[] arr = {1,1,2};
+        int[] arr = {1, 1, 2};
         removeDuplicates(arr);
     }
 
@@ -27,7 +27,7 @@ class RemoveDuplicates {
                 continue;
             }
 
-            for(int k = i + 1; k < length - 1; k++) {
+            for (int k = i + 1; k < length - 1; k++) {
                 nums[k] = nums[k + 1];
             }
             length--;
@@ -36,5 +36,4 @@ class RemoveDuplicates {
         System.out.println(Arrays.toString(nums));
         return length;
     }
-
 }

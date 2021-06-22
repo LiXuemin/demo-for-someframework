@@ -1,10 +1,5 @@
 package com.lixuemin.algo;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-
-
 /**
  * @program: demo-for-someframework
  * @description:

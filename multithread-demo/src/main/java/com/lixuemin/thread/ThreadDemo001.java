@@ -16,7 +16,7 @@ public class ThreadDemo001 {
             public void run() {
                 try {
                     Thread.sleep(5000);
-                }catch (InterruptedException e) {
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 Thread t = Thread.currentThread();

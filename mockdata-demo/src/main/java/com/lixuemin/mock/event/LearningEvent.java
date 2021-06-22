@@ -26,9 +26,6 @@ public class LearningEvent {
     private Integer subject;//学科
     private List<LearningDetailEvent> detailList;
 
-
-
-
     public Long getUserId() {
         return userId;
     }

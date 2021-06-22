@@ -1,8 +1,5 @@
 package com.lixuemin.thread;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
-
 /**
  * @program: demo-for-someframework
  *
@@ -13,13 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @create: 2021-04-28
  **/
 public class Counter {
-    private  int sum = 0;
-    public void increment() {
-        sum++;
-    }
-    public int getSum() {
-        return sum;
-    }
+    private int sum = 0;
 
     public static void main(String[] args) {
         int loop = 10000;
@@ -46,6 +37,13 @@ public class Counter {
             Thread.yield();
         }
         System.out.println("multiThread result: " + counter1.getSum());
+    }
 
+    public void increment() {
+        sum++;
+    }
+
+    public int getSum() {
+        return sum;
     }
 }

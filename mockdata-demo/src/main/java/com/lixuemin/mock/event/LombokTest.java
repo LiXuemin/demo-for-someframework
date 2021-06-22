@@ -2,6 +2,7 @@ package com.lixuemin.mock.event;
 
 import lombok.Data;
 
+
 /**
  * @program: demo-for-someframework
  * @description:
@@ -12,5 +13,4 @@ import lombok.Data;
 public class LombokTest {
     private String id;
     private String name;
-
 }
