@@ -14,7 +14,12 @@ import java.util.List;
 import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @program: demo-for-someframework
@@ -22,6 +27,7 @@ import org.springframework.stereotype.Controller;
  * @author: lixuemin
  * @create: 2021-06-21
  **/
+@Component
 public class PrivilegeService {
 
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
 package com.lixuemin.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @program: demo-for-someframework
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author: lixuemin
  * @create: 2021-06-21
  **/
-@RestController
+@Controller
 @RequestMapping("/book")
 public class BookController {
 
