@@ -12,8 +12,11 @@ import java.util.Set;
 public class CharUnique {
 
     public static void main(String[] args) {
-
+        String source = "abcccd";
+        System.out.println(isUnique(source));
     }
+
+
     public static boolean isUnique(String astr) {
         if (astr == null || astr.length() == 0) {
             return true;
