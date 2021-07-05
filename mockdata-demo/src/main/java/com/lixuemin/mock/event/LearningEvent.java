@@ -14,6 +14,7 @@ import java.util.List;
  **/
 public class LearningEvent {
 
+    private String pagePracticeId; //页面练习唯一标识
     private Long userId;//用户ID
     private String courseCode;//课程编码
     private String pageCode;//页面编码
@@ -25,6 +26,14 @@ public class LearningEvent {
     private Integer learnTime;//页面学习时长
     private Integer subject;//学科
     private List<LearningDetailEvent> detailList;
+
+    public String getPagePracticeId() {
+        return pagePracticeId;
+    }
+
+    public void setPagePracticeId(String pagePracticeId) {
+        this.pagePracticeId = pagePracticeId;
+    }
 
     public Long getUserId() {
         return userId;
