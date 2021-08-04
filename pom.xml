@@ -23,6 +23,7 @@
     <module>algorithm-demo</module>
     <module>privilege-framework-demo</module>
     <module>rabbitmq-demo</module>
+    <module>websocket-demo</module>
   </modules>
 
 </project>
