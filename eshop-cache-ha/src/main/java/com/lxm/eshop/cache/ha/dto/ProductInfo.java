@@ -31,4 +31,9 @@ public class ProductInfo {
     public void setPrice(Long price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "ProductInfo{" + "productId=" + productId + ", name='" + name + '\'' + ", price=" + price + '}';
+    }
 }
