@@ -29,7 +29,7 @@ public class GetProductInfoObservableCommand extends HystrixObservableCommand<Pr
             @Override
             public void call(Subscriber<? super ProductInfo> observer) {
                 try {
-                    if (observer.isUnsubscribed()) {
+                    //if (observer.isUnsubscribed()) {
                         for (Long productId : productIds){
                             String url = "http://127.0.0.1:8082/getProductInfo?productId=" + productId;
                             String result = HttpUtil.get(url);
@@ -37,7 +37,7 @@ public class GetProductInfoObservableCommand extends HystrixObservableCommand<Pr
                             observer.onNext(productInfo);
                         }
                         observer.onCompleted();
-                    }
+                    //}
                 } catch (Exception e) {
                     observer.onError(e);
                 }
