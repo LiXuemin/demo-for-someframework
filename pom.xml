@@ -24,6 +24,7 @@
     <module>privilege-framework-demo</module>
     <module>rabbitmq-demo</module>
     <module>websocket-demo</module>
+    <module>sensor-demo</module>
   </modules>
 
 </project>
