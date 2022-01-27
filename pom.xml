@@ -25,6 +25,7 @@
     <module>rabbitmq-demo</module>
     <module>websocket-demo</module>
     <module>sensor-demo</module>
+    <module>kafka-demo</module>
   </modules>
 
 </project>
