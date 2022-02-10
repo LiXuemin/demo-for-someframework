@@ -3,6 +3,9 @@ package com.lixuemin.rabbitmq;
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.Channel;
+import java.util.HashSet;
+import java.util.Set;
+
 
 /**
  * @program: demo-for-someframework
@@ -14,6 +17,8 @@ public class ProducerWithTransaction {
 
     private final static String QUEUE_NAME = "hello";
     public static void main(String[] argv) throws Exception {
+        Set<Integer> set = new HashSet<>();
+        set.add()
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("localhost");
         try (Connection connection = factory.newConnection();

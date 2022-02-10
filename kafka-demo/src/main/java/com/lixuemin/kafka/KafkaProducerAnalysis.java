@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory;
  **/
 public class KafkaProducerAnalysis {
     private static final String brokerList = "localhost:9092";
-    private static final String topic = "topic-demo";
+    private static final String TOPIC = "quickstart-events";
     private static final Logger LOGGER = LoggerFactory.getLogger(KafkaProducerAnalysis.class);
 
     private static Properties initConfig() {
@@ -38,8 +38,8 @@ public class KafkaProducerAnalysis {
         Properties props = initConfig();
         KafkaProducer<String, String> producer = new KafkaProducer<String, String>(props);
         try {
-            producer.send(new ProducerRecord<String, String>("quickstart-events", "send from idea"));
-            producer.send(new ProducerRecord<String, String>("quickstart-events", "send from idea with callback"), new Callback() {
+            producer.send(new ProducerRecord<String, String>(TOPIC, "send from idea"));
+            producer.send(new ProducerRecord<String, String>(TOPIC, "send from idea with callback"), new Callback() {
                 @Override
                 public void onCompletion(RecordMetadata metadata, Exception exception) {
                     if(exception != null) {
