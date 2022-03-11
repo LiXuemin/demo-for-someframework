@@ -17,10 +17,12 @@ public class BubbleSort {
         if (arr == null || n <= 1) {
             return arr;
         }
-
         int temp;
+        //循环N次
         for (int i = 0; i < n; i++) {
+            //每次从头比较相邻元素大小，进行排序
             for (int j = 0; j < n - 1; j++) {
+                //比较大小，利用一个临时变量，把小的挪到前面
                 if (arr[j] > arr[j + 1]) {
                     temp = arr[j];
                     arr[j] = arr[j + 1];
@@ -32,6 +34,11 @@ public class BubbleSort {
         return arr;
     }
 
+    /**
+     * 优化一下，加了个变量swapped表示本轮冒泡有没有发生数据变更
+     * 如果发生，则继续下一次冒泡
+     * 否则直接终止循环
+     * */
     public static int[] sort2(int[] arr, int n) {
         if (arr == null || n <= 1) {
             return arr;
