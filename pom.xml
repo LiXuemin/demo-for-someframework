@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.lixuemin</groupId>
-  <artifactId>demo-for-someframework</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0</version>
+    <groupId>com.lixuemin</groupId>
+    <artifactId>demo-for-someframework</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
 
-  <properties>
-    <maven.compiler.source>8</maven.compiler.source>
-    <maven.compiler.target>8</maven.compiler.target>
-  </properties>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
 
-  <modules>
-    <module>netty-demo</module>
-    <module>dataway-demo</module>
-    <module>multithread-demo</module>
-    <module>mockdata-demo</module>
-    <module>mybatis-demo</module>
-    <module>algorithm-demo</module>
-    <module>privilege-framework-demo</module>
-    <module>rabbitmq-demo</module>
-    <module>websocket-demo</module>
-    <module>sensor-demo</module>
-    <module>kafka-demo</module>
-  </modules>
+    <modules>
+        <module>netty-demo</module>
+        <module>dataway-demo</module>
+        <module>multithread-demo</module>
+        <module>mockdata-demo</module>
+        <module>mybatis-demo</module>
+        <module>algorithm-demo</module>
+        <module>privilege-framework-demo</module>
+        <module>rabbitmq-demo</module>
+        <module>websocket-demo</module>
+        <module>sensor-demo</module>
+        <module>kafka-demo</module>
+        <module>springboot-demo</module>
+    </modules>
 
 </project>
