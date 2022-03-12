@@ -27,12 +27,14 @@ public class BubbleSort {
                     temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
-                    System.out.println("i=" + i + ",j=" + j + ",arr=" + Arrays.toString(arr));
+                    printItem(arr, i, j);
                 }
             }
         }
         return arr;
     }
+
+
 
     /**
      * 优化一下，加了个变量swapped表示本轮冒泡有没有发生数据变更
@@ -52,7 +54,7 @@ public class BubbleSort {
                     temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
-                    System.out.println("i=" + i + ",j=" + j + ",arr=" + Arrays.toString(arr));
+                    printItem(arr, i, j);
                     swapped = true;
                 }
             }
@@ -60,5 +62,9 @@ public class BubbleSort {
 
         }
         return arr;
+    }
+
+    private static void printItem(int[] arr, int i, int j) {
+        System.out.println("i=" + i + ",j=" + j + ",arr=" + Arrays.toString(arr));
     }
 }
