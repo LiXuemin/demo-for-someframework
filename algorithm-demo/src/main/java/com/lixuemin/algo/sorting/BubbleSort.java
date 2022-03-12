@@ -5,6 +5,8 @@ import java.util.Arrays;
 
 /**
  * 冒泡排序
+ * n次循环，每次循环遍历所有相邻元素并比较大小来交换
+ * 优化点： 设置是否交换的变量，没发生交换就终止
  */
 public class BubbleSort {
 
@@ -27,7 +29,7 @@ public class BubbleSort {
                     temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
-                    printItem(arr, i, j);
+                    SortingUtil.printItem(arr, i, j);
                 }
             }
         }
@@ -54,7 +56,7 @@ public class BubbleSort {
                     temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
-                    printItem(arr, i, j);
+                    SortingUtil.printItem(arr, i, j);
                     swapped = true;
                 }
             }
@@ -64,7 +66,5 @@ public class BubbleSort {
         return arr;
     }
 
-    private static void printItem(int[] arr, int i, int j) {
-        System.out.println("i=" + i + ",j=" + j + ",arr=" + Arrays.toString(arr));
-    }
+
 }
