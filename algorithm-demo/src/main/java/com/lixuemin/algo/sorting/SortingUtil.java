@@ -18,26 +18,29 @@ public class SortingUtil {
     static int[] genertateRandom() {
         Random r = new Random();
         int[] arr = new int[100];
-        for(int i=0;i<arr.length;i++) {
+        for (int i = 0; i < arr.length; i++) {
             arr[i] = r.nextInt(100);
         }
         return arr;
-
     }
+
     static void check() {
         int[] arr1 = genertateRandom();
         int[] arr2 = new int[arr1.length];
         System.arraycopy(arr1, 0, arr2, 0, arr1.length);
         Arrays.sort(arr1);
         boolean same = true;
-        for(int i=0;i<arr1.length;i++) {
-            if(arr1[i]!=arr2[i]) {
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i] != arr2[i]) {
                 same = false;
             }
         }
         System.out.println(same);
-
     }
 
-
+    public static void assertOrder(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            assert arr[i] <= arr[i + 1];
+        }
+    }
 }
