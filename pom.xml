@@ -27,6 +27,8 @@
         <module>sensor-demo</module>
         <module>kafka-demo</module>
         <module>springboot-demo</module>
+        <module>hdfs-demo</module>
+        <module>hive-jdbc-demo</module>
     </modules>
 
 </project>
