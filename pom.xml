@@ -29,6 +29,7 @@
         <module>springboot-demo</module>
         <module>hdfs-demo</module>
         <module>hive-jdbc-demo</module>
+        <module>javaio-demo</module>
     </modules>
 
 </project>
