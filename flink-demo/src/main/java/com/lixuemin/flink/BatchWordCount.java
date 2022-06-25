@@ -1,10 +1,9 @@
-package com.lixuemin.flink.dataset;
+package com.lixuemin.flink;
 
-import org.apache.flink.api.common.functions.FlatMapFunction;
+import com.lixuemin.flink.operator.flatmap.LineSplitter;
 import org.apache.flink.api.java.DataSet;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.tuple.Tuple2;
-import org.apache.flink.util.Collector;
 
 /**
  * 简单的wordcount
@@ -20,12 +19,5 @@ public class BatchWordCount {
         ds.print();
     }
 
-    private static class LineSplitter implements FlatMapFunction<String, Tuple2<String, Integer>> {
-        @Override
-        public void flatMap(String s, Collector<Tuple2<String, Integer>> collector) throws Exception {
-            for (String word : s.split(" ")) {
-                collector.collect(new Tuple2<>(word, 1));
-            }
-        }
-    }
+
 }
