@@ -1,4 +1,4 @@
-package com.lixuemin.flink;
+package com.lixuemin.flink.source;
 
 import java.util.ArrayList;
 import java.util.List;
