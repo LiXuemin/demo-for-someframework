@@ -7,7 +7,7 @@ import org.apache.flink.streaming.api.functions.source.SourceFunction;
 
 
 public class WordStreamSource implements SourceFunction<String> {
-    private long count = 1L;
+    private final long count = 1L;
     private boolean running = true;
 
     @Override
