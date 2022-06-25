@@ -28,8 +28,8 @@
         <module>kafka-demo</module>
         <module>springboot-demo</module>
         <module>hdfs-demo</module>
-        <module>hive-jdbc-demo</module>
         <module>javaio-demo</module>
+        <module>flink-demo</module>
     </modules>
 
 </project>
