@@ -22,6 +22,9 @@ public class StreamWindowWordCount {
             .sum(1);
         ds.print("----------");
 
+        //生成执行计划图，可以将打印的数据复制到 https://flink.apache.org/visualizer/ 中粘贴并生成 执行计划图
+        System.out.println(env.getExecutionPlan());
         env.execute("WordCountWindow");
+
     }
 }
