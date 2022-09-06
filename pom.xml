@@ -30,6 +30,7 @@
         <module>hdfs-demo</module>
         <module>javaio-demo</module>
         <module>flink-demo</module>
+        <module>magic-api-demo</module>
     </modules>
 
 </project>
