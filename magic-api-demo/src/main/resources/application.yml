@@ -8,7 +8,15 @@ magic-api:
     #mac用户请改为可读写的目录
     #如果不想存到文件中，可以参考配置将接口信息存到数据库、Redis中（或自定义）
     location: D:/data/magic-api
-
+  response: |- #配置JSON格式，格式为magic-script中的表达式
+    {
+      code: code,
+      message: message,
+      data,
+      timestamp,
+      requestTime,
+      executeTime,
+    }
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
